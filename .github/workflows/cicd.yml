@@ -33,6 +33,7 @@ jobs:
           pytest -q \
             --cov=. \
             --cov-report=term \
-            --cov-report=xml  
+            --cov-report=xml \
+            --cov-report=html \  
 
             
