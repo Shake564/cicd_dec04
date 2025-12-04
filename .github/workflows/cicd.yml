@@ -37,7 +37,7 @@ jobs:
             --cov-report=html \
       - name: Prepare the webpage
         run: |
-          mkdr sites
+          mkdir sites
           mv htmlcov sites/
           mv coverage.xml sites/
       
