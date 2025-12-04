@@ -4,11 +4,16 @@ from pathlib import Path
 root = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(root / "src"))
 
+from app import multiply, add, divide, sub
 
-from app import add
+def test_multiply():
+    assert multiply(3, 4) == 12
 
 def test_add():
-    assert add(5, 6) == 11
+    assert add(3, 4) == 7
 
-def test_add2():
-    assert add(5, 6) != 10
+def test_divide():
+    assert divide(6, 3) == 2
+
+def test_sub():
+    assert sub(6, 3) == 3
