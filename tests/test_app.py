@@ -16,4 +16,4 @@ def test_divide():
     assert divide(6, 3) == 2
 
 def test_sub():
-    assert sub(6, 3) == 2
+    assert sub(6, 3) == 3
