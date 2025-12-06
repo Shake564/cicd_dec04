@@ -3,7 +3,6 @@ name: CI
 on:
   push:
     branches: [ dev ]
-  pull_request:
 
 jobs:
   run-tests:
@@ -34,5 +33,18 @@ jobs:
             --cov=. \
             --cov-report=term \
             --cov-report=xml \
-            --cov-report=html 
-           
+            --cov-report=html \
+
+      - name: Prepare the site folder
+        run: |
+          mkdir sites
+          mv htmlcov sites/
+          mv coverage.xml sites/
+
+      - name: upload the artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          name: coverage-report
+          path: ./sites
+
+  
