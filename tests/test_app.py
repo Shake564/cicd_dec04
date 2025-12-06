@@ -23,7 +23,7 @@ def test_divide():
     assert divide(0, 20) == 0
     assert divide(10000, 10) == 1000
 
-    with pytest.raises(ValueError):
+    with pytest.raises(ZeroDivisionError):
         divide(10, 0)
 
 
