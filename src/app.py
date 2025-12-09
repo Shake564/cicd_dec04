@@ -1,3 +1,4 @@
+import math
 def multiply(a, b):
     return a * b
 
@@ -35,6 +36,14 @@ def squareRoot(a):
         guess=(lastGuess+a/lastGuess)/2
         
     return round(guess, 5)
+
+#num x with base b
+def naturalLog(x):
+    if a <= 0:
+        return "Bound Error (Log)"
+    return round(math.log(a), 5)
+    
+def 
 
 
 

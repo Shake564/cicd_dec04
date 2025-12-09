@@ -35,11 +35,10 @@ def test_sub():
     assert sub(3, 10000) == -9997
 
 def test_log():
-    assert log(1) == 0
-    with pytest.raises(ValueError):
-        log(0)
-    with pytest.raises(ValueError):
-        log(-1)
+    assert naturalLog(2.7183) == 1
+    assert naturalLog(1) == 0
+    assert naturalLog(0) == "Bound Error (Log)"
+    assert naturalLog(-1) == "Bound Error (Log)"
 
 def test_square():
     assert square(2) == 4
