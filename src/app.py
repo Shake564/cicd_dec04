@@ -43,7 +43,6 @@ def naturalLog(x):
         return "Bound Error (Log)"
     return round(math.log(a), 5)
     
-def 
 
 
 
