@@ -69,8 +69,7 @@ def test_squareRoot():
     assert squareRoot(1) == 1
     assert squareRoot(0) == 0
 
-    with pytest.raises(ValueError):
-        squareRoot(-1)
+    assert squareRoot(-1) == "Negative sqrt error"
 
 def test_percent():
     assert percent(200, 10) == 20

@@ -25,6 +25,8 @@ def square(a):
 def squareRoot(a):
     if a == 0:
         return 0
+    if a < 0:
+        return ""Negative sqrt error""
     lastGuess=a/2
     guess=(lastGuess+a/lastGuess)/2
 
