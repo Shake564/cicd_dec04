@@ -47,8 +47,3 @@ def naturalLog(a):
 def percent(a, b):
     inversePercent = b/100
     return inversePercent*a
-
-    
-
-
-

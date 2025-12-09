@@ -26,25 +26,4 @@ jobs:
 
       - name: Run basic tests
         run: pytest -q
-
-      - name: Run tests with coverage
-        run: |
-          pytest -q \
-            --cov=. \
-            --cov-report=term \
-            --cov-report=xml \
-            --cov-report=html \
-
-      - name: Prepare the site folder
-        run: |
-          mkdir sites
-          mv htmlcov sites/
-          mv coverage.xml sites/
-
-      - name: upload the artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          name: coverage-report
-          path: ./sites
-
   
