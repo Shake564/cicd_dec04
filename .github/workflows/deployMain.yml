@@ -12,14 +12,36 @@ jobs:
       id-token: write
 
     steps:
-      - name: Download artifact from CI
-        uses: dawidd6/action-download-artifact@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          workflow: devBranch.yml
-          workflow_conclusion: success
-          branch: dev
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+      - name: Create Coverage Reports
+        run: |
+          pytest -q \
+            --cov=. \
+            --cov-report=term \
+            --cov-report=xml \
+            --cov-report=html \
+
+      - name: Prepare the site folder
+        run: |
+          mkdir sites
+          mv htmlcov sites/
+          mv coverage.xml sites/
+
+      - name: upload the artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
           name: coverage-report
-          path: sites/
+          path: ./sites
 
       - name: upload Pages artifact
         uses: actions/upload-pages-artifact@v4
