@@ -5,7 +5,7 @@ from pathlib import Path
 root = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(root / "src"))
 
-from app import multiply, add, divide, sub, squareRoot
+from app import multiply, add, divide, sub, squareRoot, naturalLog, sin, cos
 
 def test_multiply():
     assert multiply(3, 4) == 12

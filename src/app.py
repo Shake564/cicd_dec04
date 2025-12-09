@@ -11,14 +11,11 @@ def divide (a, b):
 def sub (a,b):
     return a-b
 
-def log(a):
-    return a
-
 def cos(a):
-    return a
+    return round(math.cos(a), 5)
 
 def sin(a):
-    return a
+    return round(math.sin(a), 5)
 
 def square(a):
     return a * a
