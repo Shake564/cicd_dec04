@@ -37,10 +37,17 @@ def squareRoot(a):
     return round(guess, 4)
 
 
-def naturalLog(x):
-    if x <= 0:
+def naturalLog(a):
+    if a <= 0:
         return "Bound Error (Log)"
-    return round(math.log(x), 4)
+    return round(math.log(a), 4)
+
+# b% of a
+# % = (Part/Whole)*100
+def percent(a, b):
+    inversePercent = b/100
+    return inversePercent*a
+
     
 
 
