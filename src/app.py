@@ -36,9 +36,9 @@ def squareRoot(a):
 
 
 def naturalLog(x):
-    if a <= 0:
+    if x <= 0:
         return "Bound Error (Log)"
-    return round(math.log(a), 5)
+    return round(math.log(x), 5)
     
 
 
