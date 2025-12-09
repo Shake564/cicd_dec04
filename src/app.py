@@ -37,7 +37,7 @@ def squareRoot(a):
         
     return round(guess, 5)
 
-#num x with base b
+
 def naturalLog(x):
     if a <= 0:
         return "Bound Error (Log)"
