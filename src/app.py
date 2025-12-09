@@ -12,10 +12,12 @@ def sub (a,b):
     return a-b
 
 def cos(a):
-    return round(math.cos(a), 5)
+    radians = math.radians(a)
+    return round(math.cos(radians), 4)
 
 def sin(a):
-    return round(math.sin(a), 5)
+    radians = math.radians(a)
+    return round(math.sin(radians), 4)
 
 def square(a):
     return a * a
@@ -32,13 +34,13 @@ def squareRoot(a):
         lastGuess=guess
         guess=(lastGuess+a/lastGuess)/2
         
-    return round(guess, 5)
+    return round(guess, 4)
 
 
 def naturalLog(x):
     if x <= 0:
         return "Bound Error (Log)"
-    return round(math.log(x), 5)
+    return round(math.log(x), 4)
     
 
 
