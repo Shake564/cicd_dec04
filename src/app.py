@@ -1,3 +1,4 @@
+import math
 def multiply(a, b):
     return a * b
 
@@ -9,3 +10,45 @@ def divide (a, b):
     
 def sub (a,b):
     return a-b
+
+def cos(a):
+    radians = math.radians(a)
+    return round(math.cos(radians), 4)
+
+def sin(a):
+    radians = math.radians(a)
+    return round(math.sin(radians), 4)
+
+def square(a):
+    return a * a
+
+def squareRoot(a):
+    if a == 0:
+        return 0
+    if a < 0:
+        return "Negative sqrt error"
+    lastGuess=a/2
+    guess=(lastGuess+a/lastGuess)/2
+
+    while(abs(guess-lastGuess)>.000001):
+        lastGuess=guess
+        guess=(lastGuess+a/lastGuess)/2
+        
+    return round(guess, 4)
+
+
+def naturalLog(a):
+    if a <= 0:
+        return "Bound Error (Log)"
+    return round(math.log(a), 4)
+
+# b% of a
+# % = (Part/Whole)*100
+def percent(a, b):
+    inversePercent = b/100
+    return inversePercent*a
+
+    
+
+
+
